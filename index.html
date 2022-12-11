@@ -7,6 +7,19 @@
             color: gold;
             font-size: 100px;
             margin-left: 256.5px;
+            animation: blink-animation 0.5s steps(5, start) infinite;
+            -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+
+        }
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+        @-webkit-keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
         }
         .triangle{
             width: 0;
@@ -30,14 +43,12 @@
             margin-left: 250px;
             background-color: saddlebrown;
         }
-
         .root{
             width: 100px;
             margin-left: 230px;
             border: 20px solid transparent;
             border-top: 110px solid gray;
         }
-
         .gift{
             width: 100px;
             height: 100px;
@@ -55,30 +66,159 @@
             margin-top: -55px;
             background-color: yellow;
         }
+        .ball{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .SnowmanHead{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            border: solid;
+            margin-left: 15px;
+        }
+        .SnowmanBody{
+            margin-top: -10px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: white;
+            border: solid;
+        }
+        .eye{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: black;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .nose{
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-left: 30px solid orangered;
+            margin-left: 45px;
+            margin-top: -1px;
+            transform: rotate(-15deg);
+        }
+
     </style>
     <title>Title</title>
 </head>
 
 <body>
-    <div class="star" >★</div>
-    <div class="triangle"></div>
-    <div class="triangle triangle2"></div>
-    <div class="triangle triangle3"></div>
-    <div class="trunk"></div>
-    <div class="root"></div>
 
-    <div style="display: flex;margin-top: -100px">
-        <div class="gift" style="margin-left: 60px">
-            <div class="gift_h"></div>
-            <div class="gift_w"></div>
+    <div>
+
+
+        <div class="star" >★</div>
+        <div class="triangle"></div>
+        <div class="triangle triangle2"></div>
+        <div class="triangle triangle3" style="z-index: 1;"></div>
+        <div class="trunk"></div>
+        <div class="root"></div>
+
+
+        <div style="display: flex;margin-top: -120px">
+            <div class="gift" style="margin-left: 60px">
+                <div class="gift_h"></div>
+                <div class="gift_w"></div>
+            </div>
+            <div class="gift" style="background-color:blue;margin-left: 250px">
+                <div class="gift_h"></div>
+                <div class="gift_w"></div>
+            </div>
+            <div class="gift" style="margin-left: 50px">
+                <div class="gift_h"></div>
+                <div class="gift_w"></div>
+            </div>
         </div>
 
-        <div class="gift" style="margin-left: 300px">
-            <div class="gift_h"></div>
-            <div class="gift_w"></div>
+        <div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: sandybrown;
+                margin-left: 300px;
+                margin-top: -470px;
+            "></div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: skyblue;
+                margin-left: 240px;
+                margin-top: -450px;
+            "></div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: orange;
+                margin-left: 220px;
+                margin-top: -400px;
+            "></div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: cyan;
+                margin-left: 280px;
+                margin-top: -410px;
+            "></div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: deeppink;
+                margin-left: 310px;
+                margin-top: -370px;
+            "></div>
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: rebeccapurple;
+                margin-left: 370px;
+                margin-top: -390px;
+            "></div>
+
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: red;
+                margin-left: 200px;
+                margin-top: -300px;
+            "></div>
+
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: #E24462;
+                margin-left: 360px;
+                margin-top: -290px;
+            "></div>
+
+            <div class="ball" style="
+                position: absolute;
+                z-index: 10;
+                background-color: #B125EA;
+                margin-left: 280px;
+                margin-top: -320px;
+            "></div>
+        </div>
+
+        <div style="margin-left: 500px;margin-top: -300px">
+            <div class="SnowmanHead">
+                <div class="eye"></div>
+                <div class="width:10px"></div>
+                <div class="eye" style="
+                margin-top: -30px;
+                margin-left: 70px;
+                "></div>
+                <div class="nose"></div>
+            </div>
+            <div class="SnowmanBody"></div>
         </div>
     </div>
-
 
 </body>
 </html>
